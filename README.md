@@ -31,7 +31,7 @@ I learn by building and maintaining systems I actually use: Linux machines, self
 
 ## Featured work
 
-### 🏠 Homelab
+### 🏠 [Homelab](https://github.com/SaiAnumula/homelab)
 
 My homelab is where I practice Linux administration, containerization, networking, storage planning, and troubleshooting. It includes:
 
@@ -41,7 +41,7 @@ My homelab is where I practice Linux administration, containerization, networkin
 - Reused hardware selected for each workload
 - Sanitized configuration and network documentation
 
-The public documentation is being prepared in my **homelab** repository.
+Explore the architecture, sanitized configurations, and design decisions in my [homelab repository](https://github.com/SaiAnumula/homelab).
 
 ### 🤖 Local-first AI assistant
 
