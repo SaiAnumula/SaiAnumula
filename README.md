@@ -15,7 +15,7 @@
 
 ## About me
 
-I'm a Purdue University student dual-majoring in **Network Engineering Technology** and **Cybersecurity**, with an expected graduation date of **May 2028**.
+I'm a junior at Purdue University dual-majoring in **Network Engineering Technology** and **Cybersecurity**, with an expected graduation date of **May 2028**.
 
 I learn by building and maintaining systems I actually use: Linux machines, self-hosted services, game servers, and local AI tools. I'm developing a portfolio for internships in networking, infrastructure, and cybersecurity.
 
@@ -90,7 +90,7 @@ For a class project, I built a working NAS with a **Raspberry Pi 5** and documen
 
 ## Current goals
 
-- Publish reproducible homelab documentation and safe configuration examples
+- Expand my homelab documentation with monitoring, automation, and backup verification
 - Turn my Hermes work into a well-documented portfolio project
 - Build more networking and cybersecurity projects beyond coursework
 - Pursue an internship where I can apply infrastructure and security skills
