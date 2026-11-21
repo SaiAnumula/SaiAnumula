@@ -54,7 +54,7 @@ A self-hosted monitoring dashboard modeled after btop that puts all of my machin
 
 ### [Local AI assistant](https://github.com/SaiAnumula/local-ai-assistant)
 
-Benchmarks, architecture notes, and sanitized telemetry from running the Hermes agent with local open-weight models in Ollama. The 24 GB Ollama configuration is my tested local baseline, while my day-to-day Hermes setup currently uses hosted inference.
+Benchmarks, architecture notes, and sanitized telemetry from running the Hermes agent with local open-weight models in Ollama. Local inference is currently on hold while I sort out my desktop RAM, so the 24 GB Ollama configuration stays documented as the baseline while my daily Hermes setup runs on hosted inference.
 
 - Re-tuned the stack after a failed RAM stick dropped the desktop from 32 GB to 24 GB by moving the KV cache to `q8_0`, cutting context from 128K to 64K, and testing under production systemd memory limits
 - Harness covering prefill speed, decode throughput, long-context recall, tool-call reliability, and calendar JSON output
@@ -66,7 +66,6 @@ Benchmarks, architecture notes, and sanitized telemetry from running the Hermes 
 A few tools I maintain stay private because they contain personal or account data.
 
 - An automated internship application pipeline that discovers listings, scores them against a resume, drafts responses, and helps fill forms with human review. It has 780+ tests, a SQLite database, and a Tailscale-only web dashboard.
-- A Tauri 2 and React 19 desktop app for tracking internship applications locally with no cloud account.
 - A fail-closed quota workflow for T3 Code that reads provider usage caches and blocks runs when headroom is low or unknown.
 
 ### Raspberry Pi NAS proof of concept
@@ -109,7 +108,6 @@ For a class project, I built a working NAS on a Raspberry Pi 5 and recorded a wa
 
 <p>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/Tauri-FFC131?style=flat-square&logo=tauri&logoColor=black" alt="Tauri" />
   <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
   <img src="https://img.shields.io/badge/Microsoft%20Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" alt="Microsoft Azure" />
