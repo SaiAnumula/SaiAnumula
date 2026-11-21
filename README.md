@@ -54,7 +54,7 @@ A self-hosted monitoring dashboard, styled after btop, that shows the state of e
 
 ### 🤖 [Local AI assistant](https://github.com/SaiAnumula/local-ai-assistant)
 
-Architecture notes, benchmark tooling, and sanitized results for the personal assistant I run with the Hermes agent and locally hosted open-weight models through Ollama:
+Architecture notes, benchmark tooling, and sanitized results for the personal assistant I run with the Hermes agent and locally hosted open-weight models through Ollama — the 24 GB Ollama setup is the verified local-inference baseline, while daily Hermes runs currently use hosted inference:
 
 - Re-tuned the whole stack when a RAM stick died and the machine dropped from 32 GB to 24 GB: moved the KV cache to q8_0, cut context from 128K to 64K, and verified the fit under the same systemd memory limits as production
 - A benchmark suite for prefill speed, decode throughput, near-window recall, tool-call reliability, and calendar JSON correctness
@@ -73,7 +73,7 @@ Some of my current work stays private because it holds personal data or employer
 
 For a class project, I built a working NAS with a **Raspberry Pi 5** and documented the process on video—including the problems I encountered and how I adapted the build.
 
-▶️ **[Watch the Raspberry Pi NAS walkthrough](https://youtu.be/0SLmClxMjxE)**
+▶️ **[Watch the Raspberry Pi NAS walkthrough](https://youtu.be/0SLmClxMjXE)**
 
 ## Tools and technologies
 
