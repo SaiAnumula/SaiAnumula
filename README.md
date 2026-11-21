@@ -1,10 +1,10 @@
 <div align="center">
 
-# Hi, I'm Sai Anumula 👋
+# Hi, I'm Sai Anumula
 
 ### Network Engineering Technology + Cybersecurity @ Purdue University
 
-**Infrastructure · Automation · Security · Local AI**
+Infrastructure · Automation · Security · Local AI
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Sai%20Anumula-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saianumula)
 [![GitHub](https://img.shields.io/badge/GitHub-SaiAnumula-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SaiAnumula)
@@ -15,65 +15,65 @@
 
 ## About me
 
-I'm a junior at Purdue University dual-majoring in **Network Engineering Technology** and **Cybersecurity**, with an expected graduation date of **May 2028**.
+I'm a junior at Purdue University dual-majoring in Network Engineering Technology and Cybersecurity, graduating in May 2028.
 
-I learn by building and maintaining systems I actually use: Linux machines, self-hosted services, monitoring, local AI tooling, and automation that runs my own internship search. Everything below is in production for me, not built for a screenshot.
+I learn by running systems I use every day. Most of my time goes into Linux servers, self-hosted services, monitoring, local AI benchmarks, and small tools I build for myself and friends.
 
 ## What I run
 
 | Environment | Technologies | Purpose |
 |---|---|---|
-| **Primary server** | Ubuntu Server · Docker | Always-on Plex, Jellyfin, and Immich for the household |
-| **Main desktop** | CachyOS · RX 9070 (16 GB) · 24 GB DDR4 | Daily Linux system, local AI inference, on-demand game hosting |
-| **Game node** | Linux · Intel laptop | Runs smaller Minecraft and Palworld workloads when needed |
-| **Remote administration** | Tailscale | Private access to approved systems without exposing management interfaces |
-| **Observability** | Prometheus · Grafana · Loki (Grafana Alloy) | Metrics and logs for the machines I depend on |
-| **Hardware projects** | Custom PCs · Raspberry Pi | Desktop, server, and NAS experimentation |
+| Primary server | Ubuntu Server, Docker | Always-on Plex, Jellyfin, and Immich for the household |
+| Main desktop | CachyOS, RX 9070 (16 GB), 24 GB DDR4 | Daily Linux system, local AI testing, and on-demand game hosting |
+| Laptop node | Ubuntu, Intel i3 | Runs smaller game servers and background jobs when needed |
+| Remote access | Tailscale | Private admin access between approved devices without opening management ports |
+| Monitoring | Prometheus, Grafana, Loki, Alloy | Host metrics, container telemetry, and log collection across machines |
+| Hardware builds | Custom PCs, Raspberry Pi | Desktop, server, and NAS builds |
 
 ## Featured work
 
-### 🏠 [Homelab](https://github.com/SaiAnumula/homelab)
+### [Homelab](https://github.com/SaiAnumula/homelab)
 
-My homelab is where I practice Linux administration, containerization, networking, storage planning, and troubleshooting. It includes:
+My homelab is where I practice Linux administration, Docker, networking, storage, and troubleshooting.
 
-- Docker-based Plex, Jellyfin, and Immich deployments, one Compose file per service
-- Private remote administration through Tailscale; game servers use a single forwarded Playit port, nothing else
-- CI that validates every Compose file and rejects unpinned image tags
-- Backup documentation with a restore test that runs on a second machine
+- Docker Compose setups for Plex, Jellyfin, and Immich, split into one file per service
+- Tailscale for private administration, with a single Playit port forwarded for game servers
+- GitHub Actions CI that validates Compose files and rejects unpinned image tags
+- Backup and restore docs written for a second-machine restore test
 
-The architecture, sanitized configurations, and design decisions are documented in the [homelab repository](https://github.com/SaiAnumula/homelab).
+The architecture, sanitized configs, and design notes are in the [homelab repository](https://github.com/SaiAnumula/homelab).
 
-### 📊 [Mission Control](https://github.com/SaiAnumula/homelab-mission-control)
+### [Mission Control](https://github.com/SaiAnumula/homelab-mission-control)
 
-A self-hosted monitoring dashboard, styled after btop, that shows the state of every machine on one page:
+A self-hosted monitoring dashboard modeled after btop that puts all of my machines on one page.
 
-- A Python telemetry agent per host that uses only the standard library
-- CPU, GPU, VRAM, memory, disk, temperature, Docker containers, and systemd services per device
-- SMART drive health when `smartctl` is available, and UP/DOWN/DEGRADED/STALE status with stale readings labeled during outages
-- React frontend with a standalone Python production server, reachable only over the LAN or tailnet
+- Lightweight Python telemetry agent per host built with the standard library only
+- Tracks CPU, GPU, VRAM, memory, disk, temperatures, Docker containers, and systemd services
+- Reports SMART drive health when `smartctl` is installed and marks stale readings when a host drops off
+- React frontend served by a standalone Python server over LAN or Tailscale
 
-### 🤖 [Local AI assistant](https://github.com/SaiAnumula/local-ai-assistant)
+### [Local AI assistant](https://github.com/SaiAnumula/local-ai-assistant)
 
-Architecture notes, benchmark tooling, and sanitized results for the personal assistant I run with the Hermes agent and locally hosted open-weight models through Ollama — the 24 GB Ollama setup is the verified local-inference baseline, while daily Hermes runs currently use hosted inference:
+Benchmarks, architecture notes, and sanitized telemetry from running the Hermes agent with local open-weight models in Ollama. The 24 GB Ollama configuration is my tested local baseline, while my day-to-day Hermes setup currently uses hosted inference.
 
-- Re-tuned the whole stack when a RAM stick died and the machine dropped from 32 GB to 24 GB: moved the KV cache to q8_0, cut context from 128K to 64K, and verified the fit under the same systemd memory limits as production
-- A benchmark suite for prefill speed, decode throughput, near-window recall, tool-call reliability, and calendar JSON correctness
-- Memory telemetry on every run — RAM, swap, memory pressure, and VRAM — with a guard that aborts a benchmark before it starves the desktop
-- CI runs the harnesses against a mock Ollama server, plus `shellcheck`, `ruff`, and a secret scan
+- Re-tuned the stack after a failed RAM stick dropped the desktop from 32 GB to 24 GB by moving the KV cache to `q8_0`, cutting context from 128K to 64K, and testing under production systemd memory limits
+- Harness covering prefill speed, decode throughput, long-context recall, tool-call reliability, and calendar JSON output
+- Logs RAM, swap, memory pressure, and VRAM on every run and aborts before starving the desktop
+- CI runs the test suite against a mock Ollama server alongside `shellcheck`, `ruff`, and a secret scan
 
-### 🔒 Production systems (private)
+### Private projects
 
-Some of my current work stays private because it holds personal data or employer information. Descriptions only, no links:
+A few tools I maintain stay private because they contain personal or account data.
 
-- An automated multi-stage internship pipeline: discovers postings, scores them against my resume, drafts applications, and fills forms behind my own review — 780+ tests, a SQLite store, and a dashboard reachable only over Tailscale.
-- A Tauri 2 + React 19 desktop tracker for the applications themselves: local-first, no cloud service, data stays on my machine.
-- A fail-closed multi-provider AI quota workflow: routes work across providers and stops when quota is exhausted instead of silently overspending.
+- An automated internship application pipeline that discovers listings, scores them against a resume, drafts responses, and helps fill forms with human review. It has 780+ tests, a SQLite database, and a Tailscale-only web dashboard.
+- A Tauri 2 and React 19 desktop app for tracking internship applications locally with no cloud account.
+- A fail-closed quota workflow for T3 Code that reads provider usage caches and blocks runs when headroom is low or unknown.
 
-### 🎬 Raspberry Pi NAS proof of concept
+### Raspberry Pi NAS proof of concept
 
-For a class project, I built a working NAS with a **Raspberry Pi 5** and documented the process on video—including the problems I encountered and how I adapted the build.
+For a class project, I built a working NAS on a Raspberry Pi 5 and recorded a walkthrough covering the problems I ran into and how I fixed them.
 
-▶️ **[Watch the Raspberry Pi NAS walkthrough](https://youtu.be/0SLmClxMjXE)**
+[Watch the Raspberry Pi NAS walkthrough](https://youtu.be/0SLmClxMjXE)
 
 ## Tools and technologies
 
@@ -87,7 +87,7 @@ For a class project, I built a working NAS with a **Raspberry Pi 5** and documen
   <img src="https://img.shields.io/badge/Tailscale-242424?style=flat-square&logo=tailscale&logoColor=white" alt="Tailscale" />
 </p>
 
-### Observability
+### Monitoring
 
 <p>
   <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus" />
@@ -105,7 +105,7 @@ For a class project, I built a working NAS with a **Raspberry Pi 5** and documen
   <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
 </p>
 
-### Apps, data & development tools
+### Apps, data & tools
 
 <p>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
@@ -117,10 +117,10 @@ For a class project, I built a working NAS with a **Raspberry Pi 5** and documen
 
 ## Current focus
 
-- Run the Summer 2027 internship search on my automated pipeline and keep its test suite and dashboard healthy
-- Repeat the local-AI reliability suite per case at 64K context so model choices rest on repeated runs, not one-shot results
-- Extend the observability stack across the homelab with alerting, and keep backup restore tests regular
-- Keep building networking and cybersecurity skills beyond coursework: trust boundaries, firewalling, and secret hygiene
+- Maintaining the internship pipeline and dashboard that my friends and I use
+- Running repeated 64K-context reliability benchmarks on local models to measure variance across runs
+- Expanding Prometheus, Grafana, and Loki coverage across my machines and running regular restore tests
+- Practicing network segmentation, host firewalls, and secret management outside of classwork
 
 ---
 
