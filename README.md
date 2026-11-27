@@ -54,7 +54,7 @@ A self-hosted monitoring dashboard modeled after btop that puts all of my machin
 
 ### [Local AI assistant](https://github.com/SaiAnumula/local-ai-assistant)
 
-Benchmarks, architecture notes, and sanitized telemetry from running the Hermes agent with local open-weight models in Ollama. Local inference is currently on hold while I sort out my desktop RAM, so the 24 GB Ollama configuration stays documented as the baseline while my daily Hermes setup runs on hosted inference.
+Benchmarks, architecture notes, and sanitized telemetry from running the Hermes agent with local open-weight models. I retired standalone Ollama in November 2026 and benchmarked Inkling 2 Mini and Ornith 1.5 35B on PolyStrata. The local PolyStrata setup is paused, so daily Hermes runs on hosted inference.
 
 - Re-tuned the stack after a failed RAM stick dropped the desktop from 32 GB to 24 GB by moving the KV cache to `q8_0`, cutting context from 128K to 64K, and testing under production systemd memory limits
 - Harness covering prefill speed, decode throughput, long-context recall, tool-call reliability, and calendar JSON output
@@ -116,8 +116,8 @@ For a class project, I built a working NAS on a Raspberry Pi 5 and recorded a wa
 ## Current focus
 
 - Maintaining the internship pipeline and dashboard that my friends and I use
-- Running repeated 64K-context reliability benchmarks on local models to measure variance across runs
-- Expanding Prometheus, Grafana, and Loki coverage across my machines and running regular restore tests
+- Evaluating local models on PolyStrata and llama.cpp (Inkling 2 Mini, Ornith 1.5 35B, Qwen) on 24 GB RAM / 16 GB VRAM
+- Expanding Prometheus, Grafana, and Loki coverage across my machines ([backup and restore runbook](https://github.com/SaiAnumula/homelab/blob/main/docs/backup-and-restore.md))
 - Practicing network segmentation, host firewalls, and secret management outside of classwork
 
 ---
