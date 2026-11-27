@@ -58,7 +58,7 @@ Benchmarks, architecture notes, and sanitized telemetry from running the Hermes 
 
 - Re-tuned the stack after a failed RAM stick dropped the desktop from 32 GB to 24 GB by moving the KV cache to `q8_0`, cutting context from 128K to 64K, and testing under production systemd memory limits
 - Harness covering prefill speed, decode throughput, long-context recall, tool-call reliability, and calendar JSON output
-- Logs RAM, swap, memory pressure, and VRAM on every run and aborts before starving the desktop
+- Logs RAM, swap, memory pressure, and VRAM on every benchmark run
 - CI runs the test suite against a mock Ollama server alongside `shellcheck`, `ruff`, and a secret scan
 
 ### Private projects
