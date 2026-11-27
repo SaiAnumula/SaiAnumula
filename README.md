@@ -54,7 +54,7 @@ A self-hosted monitoring dashboard modeled after btop that puts all of my machin
 
 ### [Local AI assistant](https://github.com/SaiAnumula/local-ai-assistant)
 
-Benchmarks, architecture notes, and sanitized telemetry from running the Hermes agent with local open-weight models. I retired standalone Ollama in November 2026 and benchmarked Inkling 2 Mini and Ornith 1.5 35B on PolyStrata. The local PolyStrata setup is paused, so daily Hermes runs on hosted inference.
+Benchmarks, architecture notes, and sanitized telemetry from running the Hermes agent with local open-weight models. I retired standalone Ollama in November 2026 and benchmarked Inkling 2 Mini on llama.cpp Vulkan alongside Ornith 1.5 35B and Qwen3.6 35B on PolyStrata. The local PolyStrata setup is paused, so daily Hermes runs on hosted inference.
 
 - Re-tuned the stack after a failed RAM stick dropped the desktop from 32 GB to 24 GB by moving the KV cache to `q8_0`, cutting context from 128K to 64K, and testing under production systemd memory limits
 - Harness covering prefill speed, decode throughput, long-context recall, tool-call reliability, and calendar JSON output
